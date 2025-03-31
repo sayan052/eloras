@@ -1,0 +1,599 @@
+/* General Styles */
+body {
+    font-family: 'Yesteryear', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+header {
+    background-color: #ff6f00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 370px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-right: 60px;
+}
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+    position: relative;
+    width: 260px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Dropdown Arrow */
+.dropdown-toggle::after {
+    content: "▼";
+    font-size: 12px;
+    margin-left: 10px;
+    color: #ff6f00;
+}
+
+/* Hover Effect */
+.dropdown-toggle:hover {
+    border-color: #ff6f00;
+    background-color: #ffffff;
+}
+
+.dropdown-toggle img {
+    width: 24px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: black;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Dropdown Items */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+    background: #ffcc80;
+}
+
+.dropdown-item img {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 0 0;
+}
+
+.show {
+    display: block;
+}
+
+/* Price Range Filter */
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+#priceFilter {
+    width: 150px;
+}
+
+#priceValue {
+    font-weight: bold;
+}
+
+/* Menu Container */
+#menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-item button {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    width: 30%; /* Adjust width */
+    margin: 10px auto 0;
+}
+
+.menu-item button img {
+    width: 40px;
+    height: 30px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.menu-item button:hover {
+    background-color: #e65100;
+}
+/* Order Summary */
+#orderSummary {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Increased width for better spacing */
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Order List */
+#orderList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#orderList li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Order Item Text */
+.order-item-text {
+    flex-grow: 1; /* Ensures text takes up available space */
+    font-weight: 500;
+}
+
+/* Edit Buttons (Increase, Decrease, Remove) */
+.edit-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-btn, .remove-btn {
+    background: #ff6f00;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn:hover {
+    background: #e65100;
+}
+
+.remove-btn {
+    background: #ff4444;
+}
+
+.remove-btn:hover {
+    background: #d32f2f;
+}
+
+/* Checkout Button */
+#checkoutBtn {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#checkoutBtn:hover {
+    background-color: #e65100;
+}
+
+/* Fixing Icon Size & Position */
+#orderList li button img {
+    width: 22px;
+    height: 22px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#orderList li button:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Button Styling */
+#orderList li button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ff6f00;
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: left 10px;
+}
+/* Order Item Structure */
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Text Alignment */
+.order-item-text {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Button Container */
+.edit-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.cart-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    margin-bottom: -13px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+/* Floating Arrow Style */
+.order-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8c145;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.order-arrow.show {
+    display: block;
+}
+
+.order-arrow:hover {
+    background-color: #f5a623;
+}
+
+.order-arrow img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Order Summary Section */
+#orderSummary {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#orderSummary h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#orderSummary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#orderSummary ul li {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#orderSummary p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#checkoutBtn {
+    background-color: #f8c145;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#checkoutBtn:hover {
+    background-color: #f5a623;
+}
+#orderArrow {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    display: block; /* Initially visible */
+}
+/* Footer Styling */
+footer {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    padding: 20px 15px; /* Reduced padding */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Reduced max-width */
+    margin: 0 auto;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    width: 30%;
+    padding: 10px; /* Reduced padding */
+    margin: 5px; /* Reduced margin */
+}
+
+.footer-left h3, .footer-center h4, .footer-right h4 {
+    font-size: 1.2em; /* Smaller font size */
+    margin-bottom: 8px; /* Reduced margin */
+    font-weight: bold;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center li, .footer-right li {
+    margin: 5px 0; /* Reduced margin */
+}
+
+.footer-center a, .footer-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px; /* Smaller font size */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover, .footer-right a:hover {
+    color: #ffeb3b; /* Gold color for hover effect */
+    transform: translateX(3px); /* Smaller movement effect */
+}
+
+.footer-bottom {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 10px; /* Reduced padding */
+    font-size: 13px; /* Smaller font size */
+    letter-spacing: 0.4px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px; /* Reduced padding */
+    }
+
+    .footer-center ul, .footer-right ul {
+        padding: 0;
+    }
+
+    .footer-center li, .footer-right li {
+        margin: 4px 0; /* Reduced margin */
+    }
+}
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+header h1 .header-logo {
+    width: 70px; /* Adjust size of the logo */
+    height: 70px;
+    margin-right: 10px; /* Space between the logo and the text */
+    border-radius: 50%;
+}
+
+/* Apply Yesteryear font to all h1 tags */
+h1 {
+    font-family: 'Yesteryear', cursive;
+    font-weight: normal;
+    font-size: 3em; /* Adjust font size */
+    color: #333; /* Text color */
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.no-items-message {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+    margin-top: 30px;
+    padding: 15px;
+    background: #ffecec;
+    border: 1px solid #ff7b7b;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-items-message {
+    color: #df4623; /* Cute reddish-orange for food theme */
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 229, 204, 0.8); /* Soft peach background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
